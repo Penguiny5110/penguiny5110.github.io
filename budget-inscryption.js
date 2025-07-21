@@ -25,7 +25,7 @@ const cardHPColor = "#4aba66";
 {
 //main
 {
-const cardColor = "#25A5D8"
+const cardColor = "#25A5D8";
 
 var card1 = new Rectangle(cardWidth,cardHeight);
 card1.setPosition(edgeGapX,getHeight() - card1.getHeight() - edgeGapY);
