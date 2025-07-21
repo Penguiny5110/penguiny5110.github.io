@@ -34,7 +34,7 @@
         <script>
         window.onload = function() {
                         //variables
-            {
+            
             var background = new Rectangle(getWidth(), getHeight());
             background.setPosition(0,0);
             background.setColor("#0BCDFF");
@@ -42,9 +42,9 @@
             background.layer = -100;
 
             //main
-            {
+            
             //cards
-            {
+            
             var cardWidth = 60;
             var cardHeight = 75;
             var cardGap = 35;
@@ -57,9 +57,9 @@
             var cardHPColor = "#4aba66";
 
             //player cards
-            {
+            
             //main
-            {
+            
             var cardColor = "#25A5D8";
 
             var card1 = new Rectangle(cardWidth,cardHeight);
@@ -76,12 +76,12 @@
             card3.setPosition(card2.getX() + cardWidth + cardGap,card1.getY());
             card3.setColor(cardColor);
             add(card3);
-            }
+            
 
             //txt
-            {
+            
             //card 1 txt
-            {
+            
             var card1Damage = Randomizer.nextInt(1, 2);
             var card1HP = Randomizer.nextInt(1, 2);
             // var card1HP = 10;
@@ -97,10 +97,10 @@
             card1HPTxt.setPosition(card1.getX() + card1.getWidth() - textGap - card1HPTxt.getWidth(), card1.getY() + card1.getHeight() - textGap - 5);
             card1HPTxt.setColor(cardHPColor);
             add(card1HPTxt);
-            }
+            
 
             //card 2 txt
-            {
+            
             var card2Damage = Randomizer.nextInt(2, 3);
             var card2HP = Randomizer.nextInt(2, 3);
             // var card2HP = 10;
@@ -116,10 +116,10 @@
             card2HPTxt.setPosition(card2.getX() + card2.getWidth() - textGap - card2HPTxt.getWidth(), card2.getY() + card2.getHeight() - textGap - 5);
             card2HPTxt.setColor(cardHPColor);
             add(card2HPTxt);
-            }
+            
 
             //card 3 txt
-            {
+            
             var card3Damage = Randomizer.nextInt(3, 5);
             var card3HP = Randomizer.nextInt(1, 1);
             var card3Mod = [];
@@ -134,15 +134,15 @@
             card3HPTxt.setPosition(card3.getX() + card3.getWidth() - textGap - card3HPTxt.getWidth(), card3.getY() + card3.getHeight() - textGap - 5);
             card3HPTxt.setColor(cardHPColor);
             add(card3HPTxt);
-            }
+            
 
             while(card1Damage + card2Damage + card3Damage >= 10){
                 card1Damage = Randomizer.nextInt(1, 2);
                 card2Damage = Randomizer.nextInt(2, 3);
                 card3Damage = Randomizer.nextInt(3, 5);
             }
-            }
-            }
+            
+            
 
             var cardList = [card1,card2,card3];
             var playerDamageList = [card1Damage,card2Damage,card3Damage];
@@ -151,9 +151,9 @@
             var playerHPTxtList = [card1HPTxt,card2HPTxt,card3HPTxt];
 
             //enemy cards
-            {
+            
             //main
-            {
+            
             var enemyCardColor = "#c75a5a"
 
             var enemyCard1 = new Rectangle(cardWidth,cardHeight);
@@ -170,15 +170,15 @@
             enemyCard3.setPosition(enemyCard2.getX() + cardWidth + cardGap,enemyCard1.getY());
             enemyCard3.setColor(enemyCardColor);
             add(enemyCard3);
-            }
+            
 
             var enemyLowRange = 1;
             var enemyHighRange = 3;
 
             //txt
-            {
+            
             //enemy card 1 txt
-            {
+            
             var enemyCard1Damage = Randomizer.nextInt(enemyLowRange, enemyHighRange);
             var enemyCard1HP = Randomizer.nextInt(enemyLowRange, enemyHighRange);
             var enemyCard1Mod = [];
@@ -193,10 +193,10 @@
             enemyCard1HPTxt.setPosition(enemyCard1.getX() + enemyCard1.getWidth() - textGap - enemyCard1HPTxt.getWidth(), enemyCard1.getY() + enemyCard1.getHeight() - textGap - 5);
             enemyCard1HPTxt.setColor(cardHPColor);
             add(enemyCard1HPTxt);
-            }
+            
 
             //enemy card 2 txt
-            {
+            
             var enemyCard2Damage = Randomizer.nextInt(enemyLowRange, enemyHighRange);
             var enemyCard2HP = Randomizer.nextInt(enemyLowRange, enemyHighRange);
             var enemyCard2Mod = [];
@@ -211,10 +211,10 @@
             enemyCard2HPTxt.setPosition(enemyCard2.getX() + enemyCard2.getWidth() - textGap - enemyCard2HPTxt.getWidth(), enemyCard2.getY() + enemyCard2.getHeight() - textGap - 5);
             enemyCard2HPTxt.setColor(cardHPColor);
             add(enemyCard2HPTxt);
-            }
+            
 
             //enemy card 3 txt
-            {
+            
             var enemyCard3Damage = Randomizer.nextInt(enemyLowRange, enemyHighRange);
             var enemyCard3HP = Randomizer.nextInt(enemyLowRange, enemyHighRange);
             var enemyCard3Mod = [];
@@ -229,16 +229,16 @@
             enemyCard3HPTxt.setPosition(enemyCard3.getX() + enemyCard3.getWidth() - textGap - enemyCard3HPTxt.getWidth(), enemyCard3.getY() + enemyCard3.getHeight() - textGap - 5);
             enemyCard3HPTxt.setColor(cardHPColor);
             add(enemyCard3HPTxt);
-            }
-            }
-            }
+            
+            
+            
 
             var enemyCardList = [enemyCard1,enemyCard2,enemyCard3];
             var enemyDamageList = [enemyCard1Damage,enemyCard2Damage,enemyCard3Damage];
             var enemyHPList = [enemyCard1HP,enemyCard2HP,enemyCard3HP];
             var enemyDamageTxtList = [enemyCard1DamageTxt,enemyCard2DamageTxt,enemyCard3DamageTxt];
             var enemyHPTxtList = [enemyCard1HPTxt,enemyCard2HPTxt,enemyCard3HPTxt];
-            }
+            
 
             var endTurnButton = new Rectangle(40,40);
             endTurnButton.setPosition(10,getHeight() / 2 - endTurnButton.getHeight() / 2);
@@ -246,9 +246,9 @@
             add(endTurnButton);
 
             //places
-            {
+            
             //vars
-            {
+            
             var placeGaps = 5;
 
             var place1X = card1.getX();
@@ -259,12 +259,12 @@
             var enemyY = endTurnButton.getY() - placeGaps - cardHeight;
 
             var startingPlayerY = card1.getY();
-            }
+            
 
             //sprites
-            {
+            
             //player
-            {
+        
             var playerPlaceColor = "#9865E3";
 
             var place1P = new Rectangle(cardWidth,cardHeight);
@@ -286,10 +286,10 @@
             place3P.layer = 0;
 
             var placeListP = [place1P,place2P,place3P];
-            }
+            
 
             //enemy
-            {
+            
             var enemyPlaceColor = "#9865E3";
 
             var enemyPlace1P = new Rectangle(cardWidth,cardHeight);
@@ -311,12 +311,12 @@
             enemyPlace3P.layer = 0;
 
             var enemyPlaceListP = [enemyPlace1P,enemyPlace2P,enemyPlace3P];
-            }
-            }
-            }
+            
+            
+            
 
             //backboards
-            {
+            
             var backGap = 15;
 
             var playerBackboard = new Rectangle((card3.getX() + cardWidth + backGap) - (card1.getX() - backGap),(card1.getY() + cardHeight + backGap) - (card1.getY() - backGap));
@@ -340,10 +340,10 @@
             placeBackboard.setColor("#8754D2");
             add(placeBackboard);
             placeBackboard.layer = -1;
-            }
+            
 
             //health
-            {
+            
             var playerLives = 3;
             var gameStatus = 0;
 
@@ -352,12 +352,12 @@
             gameStatusTxt.setColor("#000000");
             add(gameStatusTxt);
             // gameStatusTxt.debug = true;
-            }
+            
 
             var transitionCounter = 0;
 
             //other buttons
-            {
+            
             var restartButton = new Rectangle(endTurnButton.getWidth(),endTurnButton.getHeight());
             restartButton.setPosition(getWidth() - restartButton.getWidth() - 10,(getHeight() / 2) - (endTurnButton.getHeight() / 2));
             restartButton.setColor("#268209");
@@ -367,10 +367,10 @@
             restartButtonTxt.setPosition(restartButton.getX() + (restartButton.getWidth() / 2) -  (restartButtonTxt.getWidth() / 2),restartButton.getY() + (restartButton.getHeight() / 2) + (restartButtonTxt.getHeight() / 2) - 2.5);
             restartButtonTxt.setColor("#000000");
             add(restartButtonTxt);
-            }
+            
 
             //player score and lives
-            {
+            
             var playerScore = 0;
 
             var playerScoreTxt = new Text(playerScore,"30pt Arial");
@@ -384,11 +384,11 @@
             add(livesTxt);
 
             var difficulty = 0;
-            }
-            }
+            
+            
 
             //upgrade
-            {
+            
             var backgroundU = new Rectangle(getWidth(), getHeight());
             backgroundU.setPosition(0,0);
             backgroundU.setColor("#ede15a");
@@ -404,7 +404,7 @@
             var damageUpgrade = "#832ae8";
 
             //buttons
-            {
+            
             var upgradeButton1 = new Rectangle(buttonSize,buttonSize);
             upgradeButton1.setPosition(50,(getHeight() / 2) - (upgradeButton1.getHeight() / 2));
             upgradeButton1.setColor(specialUpgrade);
@@ -422,10 +422,10 @@
             upgradeButton3.setColor(specialUpgrade);
             // add(upgradeButton3);
             upgradeButton3.layer = 101;
-            }
+            
 
             //txt
-            {
+            
             var lowUVal = 1;
             var highUVal = 2;
             var upgradeButton1Val = Randomizer.nextInt(lowUVal,highUVal);
@@ -449,9 +449,9 @@
             upgradeButton3Txt.setColor("");
             // add(upgradeButton3Txt);
             upgradeButton3Txt.layer = 101;
-            }
-            }
-            }
+            
+            
+            
 
             function start(){
                 startInteraction();
