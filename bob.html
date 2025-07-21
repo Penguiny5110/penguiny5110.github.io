@@ -320,14 +320,14 @@ var enemyPlaceListP = [enemyPlace1P,enemyPlace2P,enemyPlace3P];
 var backGap = 15;
 
 var playerBackboard = new Rectangle((card3.getX() + cardWidth + backGap) - (card1.getX() - backGap),(card1.getY() + cardHeight + backGap) - (card1.getY() - backGap));
-playerBackboard.setPosition(card1.getX() - backGap,card1.getY() - backGap)
+playerBackboard.setPosition(card1.getX() - backGap,card1.getY() - backGap);
 playerBackboard.setColor("#4E73B8");
 add(playerBackboard);
 playerBackboard.layer = -1;
 // playerBackboard.debug = true;
 
 var enemyBackboard = new Rectangle((enemyCard3.getX() + cardWidth + backGap) - (enemyCard1.getX() - backGap),(enemyCard1.getY() + cardHeight + backGap) - (enemyCard1.getY() - backGap));
-enemyBackboard.setPosition(enemyCard1.getX() - backGap,enemyCard1.getY() - backGap)
+enemyBackboard.setPosition(enemyCard1.getX() - backGap,enemyCard1.getY() - backGap);
 enemyBackboard.setColor("#b22e39");
 add(enemyBackboard);
 enemyBackboard.layer = -1;
@@ -399,7 +399,7 @@ var mode = "play";
 
 var buttonSize = 50;
 
-var specialUpgrade = "#6d71bf"
+var specialUpgrade = "#6d71bf";
 var healthUpgrade = "#21b829";
 var damageUpgrade = "#832ae8";
 
@@ -434,19 +434,19 @@ var upgradeButton3Val = Randomizer.nextInt(lowUVal,highUVal);
 
 var upgradeButton1Txt = new Text(upgradeButton1Val,"30pt Arial");
 upgradeButton1Txt.setPosition(upgradeButton1.getX() + (upgradeButton1.getWidth() / 2) -  (upgradeButton1Txt.getWidth() / 2),upgradeButton1.getY() + (upgradeButton1.getHeight() / 2) + (upgradeButton1Txt.getHeight() / 2) - 5);
-upgradeButton1Txt.setColor("")
+upgradeButton1Txt.setColor("");
 // add(upgradeButton1Txt);
 upgradeButton1Txt.layer = 101;
 
 var upgradeButton2Txt = new Text(upgradeButton2Val,"30pt Arial");
 upgradeButton2Txt.setPosition(upgradeButton2.getX() + (upgradeButton2.getWidth() / 2) -  (upgradeButton2Txt.getWidth() / 2),upgradeButton2.getY() + (upgradeButton2.getHeight() / 2) + (upgradeButton2Txt.getHeight() / 2) - 5);
-upgradeButton2Txt.setColor("")
+upgradeButton2Txt.setColor("");
 // add(upgradeButton2Txt);
 upgradeButton2Txt.layer = 101;
 
 var upgradeButton3Txt = new Text(upgradeButton3Val,"30pt Arial");
 upgradeButton3Txt.setPosition(upgradeButton3.getX() + (upgradeButton3.getWidth() / 2) -  (upgradeButton3Txt.getWidth() / 2),upgradeButton3.getY() + (upgradeButton3.getHeight() / 2) + (upgradeButton3Txt.getHeight() / 2) - 5);
-upgradeButton3Txt.setColor("")
+upgradeButton3Txt.setColor("");
 // add(upgradeButton3Txt);
 upgradeButton3Txt.layer = 101;
 }
@@ -780,10 +780,10 @@ function keyDown(e){
     }
     if(e.key == "p"){
         // println();
-        println(enemyHPList);
-        println(enemyDamageList);
-        println(playerHPList);
-        println(playerDamageList);
+        // println(enemyHPList);
+        // println(enemyDamageList);
+        // println(playerHPList);
+        // println(playerDamageList);
         
         // println(enemyCard1.getX());
         // println(enemyCard1.getY());
@@ -876,15 +876,15 @@ function removeCard(type,num){
 function cardSelect(num,elem){
     if(num == 1){
         if(elem == card1 || elem == card1DamageTxt || elem == card1HPTxt){
-            return true
+            return true;
         }
     }else if(num == 2){
         if(elem == card2 || elem == card2DamageTxt || elem == card2HPTxt){
-            return true
+            return true;
         }
     }else if(num == 3){
         if(elem == card3 || elem == card3DamageTxt || elem == card3HPTxt){
-            return true
+            return true;
         }
     }
 }
@@ -1096,7 +1096,7 @@ function lose(){
     }else if(playerLives == 1){
         println("Your lost a life, you have " + playerLives + " life left");
     }else{
-        print("Lives error");
+        println("Lives error");
     }
     startInteraction();
     if(playerLives <= 0){
@@ -1191,7 +1191,6 @@ function setTextSize(){
             playerHPTxtList[i].setPosition(cardList[i].getX() + cardList[i].getWidth() - textGap - playerHPTxtList[i].getWidth() - 5, cardList[i].getY() + cardList[i].getHeight() - textGap - 5);
         }else{
             playerHPTxtList[i].setFont("30pt Arial");
-            playerHPTxtList[i].setPosition(cardList[i].getX() + cardList[i].getWidth() - textGap - playerHPTxtList[i].getWidth(), cardList[i].getY() + cardList[i].getHeight() - textGap - 5);
             playerHPTxtList[i].setPosition(cardList[i].getX() + cardList[i].getWidth() - textGap - playerHPTxtList[i].getWidth(), cardList[i].getY() + cardList[i].getHeight() - textGap - 5);
         }
     }
