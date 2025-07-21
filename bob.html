@@ -1,6 +1,6 @@
 <html>
     <head>
-       <title>Bob 14</title>
+       <title>Bob 15</title>
 
     
      <style>
@@ -57,6 +57,10 @@
             add(background);
             background.layer = -100;
 
+            var card1 = new Rectangle(60,75);
+            card1.setPosition(70,500 - 70 - 30);
+            card1.setColor("#25A5D8");
+            add(card1);
             //main
             
             //cards
@@ -78,10 +82,6 @@
             
             const cardColor = "#25A5D8";
 
-            var card1 = new Rectangle(60,75);
-            card1.setPosition(70,500 - 70 - 30);
-            card1.setColor("#25A5D8");
-            add(card1);
 
             var card2 = new Rectangle(cardWidth,cardHeight);
             card2.setPosition(card1.getX() + cardWidth + cardGap,card1.getY());
