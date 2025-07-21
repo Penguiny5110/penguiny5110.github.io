@@ -10,22 +10,22 @@ background.layer = -100;
 {
 //cards
 {
-var cardWidth = 60;
-var cardHeight = 75;
-var cardGap = 35;
-var edgeGapX = 70;
-var edgeGapY = 30;
+const cardWidth = 60;
+const cardHeight = 75;
+const cardGap = 35;
+const edgeGapX = 70;
+const edgeGapY = 30;
 var selectedCard = 0;
 
-var textGap = 5;
-var cardDamageColor = "#646799";
-var cardHPColor = "#4aba66";
+const textGap = 5;
+const cardDamageColor = "#646799";
+const cardHPColor = "#4aba66";
 
 //player cards
 {
 //main
 {
-var cardColor = "#25A5D8"
+const cardColor = "#25A5D8"
 
 var card1 = new Rectangle(cardWidth,cardHeight);
 card1.setPosition(edgeGapX,getHeight() - card1.getHeight() - edgeGapY);
@@ -119,7 +119,7 @@ var playerHPTxtList = [card1HPTxt,card2HPTxt,card3HPTxt];
 {
 //main
 {
-var enemyCardColor = "#c75a5a"
+const enemyCardColor = "#c75a5a"
 
 var enemyCard1 = new Rectangle(cardWidth,cardHeight);
 enemyCard1.setPosition(edgeGapX,edgeGapY);
